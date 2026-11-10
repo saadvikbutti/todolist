@@ -7,6 +7,7 @@ const list = document.getElementById('todo-list');
 const saved = localStorage.getItem("todos");
 
 let todos;
+let currentFilter = "all"
 
 if (saved !== null) {
     todos = JSON.parse(saved);
@@ -99,14 +100,44 @@ function createTodoNode(todo, index) {
     return item;
 }
 
+// Active Todos
+const active = document.getElementById("active-btn")
+
+
+// Completed Todos
+const completed = document.getElementById("completed-btn")
+
+// All Todos
+const all = document.getElementById("all-btn")
+
+    
 // Render todos
 function render() {
     list.innerHTML = "";
 
-    todos.forEach(function(todo, index) {
-        const node = createTodoNode(todo, index);
+    let visibleTodos = todos;
+
+    if(currentFilter === "completed"){
+        visibleTodos = todos.filter(function(todo){
+        return todo.completed === true
+        })
+    }
+
+    else if(currentFilter === "active"){
+        visibleTodos = todos.filter(function(todo){
+        return todo.completed === false
+        })
+    }
+
+    else{
+        visibleTodos = todos
+    }
+
+    visibleTodos.forEach(function(todo, index) {
+        const node = createTodoNode(todo, todos.indexOf(todo));
         list.appendChild(node);
     });
+    
 }
 
 // Add todo
@@ -139,6 +170,21 @@ input.addEventListener("keydown", function(event) {
         addTodo();
     }
 });
+
+all.addEventListener("click", function(){
+    currentFilter = "all"
+        render()
+    })
+
+active.addEventListener("click", function(){
+    currentFilter = "active"
+    render()
+})
+
+completed.addEventListener("click", function(){
+    currentFilter = "completed"
+    render();
+})
 
 // Initial render
 render();
