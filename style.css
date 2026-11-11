@@ -18,6 +18,23 @@ body {
     border: 2px solid red;
 }
 
+  /* Brand */
+
+.brand{
+    padding-bottom: 10px;
+}
+
+.brand h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.brand p{
+    font-size: smaller;
+    color: rgb(157, 151, 151);
+}
+
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
