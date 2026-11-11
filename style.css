@@ -41,7 +41,28 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    border-radius: 15px;
+    border: 2px solid rgb(81, 0, 255);
+}
+
+#total-card{
+    background-color: #24314d;
+    border-radius: 12px;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+#completed-card{
+    background-color: #24314d;
+    border-radius: 12px;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+#remaining-card{
+     background-color: #24314d;
+    border-radius: 12px;
+    padding: 10px;
+    border: 2px solid red;
 }
 
 
