@@ -10,6 +10,14 @@ body {
     font-size: 16px;
 }
 
+#dashboard{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 2px solid red;
+}
+
 .completed {
     text-decoration: line-through;
     opacity: 0.5;

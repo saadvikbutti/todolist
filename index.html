@@ -7,33 +7,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>ToDo-List</title>
+    <title>Taskly</title>
 </head>
 <body>
-    <h1>Simple ToDo List</h1>
+    <main id="dashboard">
+        <h1>Taskly</h1>
 
-    <!-- Progress Counters -->
-     <h2 id="total-counters"></h2>
-     <H2 id="completed-counters"></H2>
-     <H2 id="remaining-counters"></H2>
+        <!-- Progress Counters -->
+        <div id="total-card">
+            <h2 id="total-counters"></h2>
+            <h2 id="total-header">TOTAL</h2>
+        </div>
 
-     <h2 id="total-header">TOTAL</h2>
-     <H2 id="completed-header">COMPLETED</H2>
-     <H2 id="remaining-header">REMAINING</H2>
+        <div id="completed-card">
+            <h2 id="completed-counters"></H2>
+            <h2 id="completed-header">COMPLETED</H2>
+        </div>    
 
+        <div id="remaining-card">
+            <h2 id="remaining-counters"></H2>
+            <h2 id="remaining-header">REMAINING</H2>
+        </div>
+        <!-- input and btn to add new tools -->
+        <input type="text" id="todo-input" placeholder="Enter a task and press Add">
 
-    <!-- input and btn to add new tools -->
-    <input type="text" id="todo-input" placeholder="Enter a task and press Add">
+        <button id="add-btn">Add</button>
 
-    <button id="add-btn">Add</button>
-
-    <div>
-        <button id="all-btn">All</button>
-        <button id="active-btn">Active</button>
-        <button id="completed-btn">Completed</button>
-    </div>
-    
-    <ul id="todo-list"></ul>
+        <div id="seg-btns">
+            <button id="all-btn">All</button>
+            <button id="active-btn">Active</button>
+            <button id="completed-btn">Completed</button>
+        </div>
+        
+        <ul id="todo-list"></ul>
+    </main>    
     <script src="script.js"></script>
 </body>
 </html>
