@@ -137,6 +137,8 @@ function render() {
         const node = createTodoNode(todo, todos.indexOf(todo));
         list.appendChild(node);
     });
+
+    ProgressCounters();
     
 }
 
@@ -158,6 +160,38 @@ function addTodo() {
     render();
 
     input.value = "";
+}
+
+// Progress counters
+function ProgressCounters(){
+    // Completed Counters
+    const compCounter = document.getElementById("completed-counters")
+    compCounter.textContent = todos.reduce(function(acc, todo){
+        if(todo.completed === true){
+            return acc + 1;
+        }    
+
+        else{
+            return acc
+        }
+    },0)
+
+    // Remaining Counters
+    const remCounter = document.getElementById("remaining-counters")
+    remCounter.textContent = todos.reduce(function(acc, todo){
+        if(todo.completed === false){
+            return acc + 1;
+        }
+        
+        else{
+            return acc;
+        }
+    },0)
+
+    // Total Counters
+    const totCounter = document.getElementById("total-counters")
+    totCounter.textContent = todos.length
+
 }
 
 // Event listeners
