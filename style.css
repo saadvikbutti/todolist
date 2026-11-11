@@ -10,6 +10,7 @@ body {
     font-size: 16px;
 }
 
+/* Dashboard */
 #dashboard{
     width: 100%;
     max-width: 800px;
@@ -34,6 +35,15 @@ body {
     font-size: smaller;
     color: rgb(157, 151, 151);
 }
+
+/* Progress Cards */
+#stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 15px;
+}
+
 
 .completed {
     text-decoration: line-through;
