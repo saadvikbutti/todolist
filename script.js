@@ -150,6 +150,14 @@ function addTodo() {
         return;
     }
 
+    // Caps Logic
+    let firstChar = text.charAt(0)
+    firstChar = firstChar.toUpperCase()
+    let string = text.slice(1)
+
+    text = firstChar + string
+
+
     let todo = {
         text: text,
         completed: false
@@ -193,6 +201,9 @@ function ProgressCounters(){
     totCounter.textContent = todos.length
 
 }
+
+// String Capitalization
+
 
 // Event listeners
 addBtn.addEventListener("click", function() {
