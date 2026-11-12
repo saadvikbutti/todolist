@@ -1,103 +1,145 @@
-*{
+
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
 body {
-    background-color: #111827;
-    color: #F9FAFB;
+    background-color: #F8F7FC;
+    color: #292536;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
 
 /* Dashboard */
-#dashboard{
+#dashboard {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: 15px;
-    border: 2px solid red;
 }
 
-  /* Brand */
+/* Brand */
 
-.brand{
-    padding-bottom: 10px;
+.brand {
+    padding-bottom: 15px;
 }
 
-.brand h1{
+.brand h1 {
     font-size: xx-large;
     font-weight: bolder;
     letter-spacing: 1px;
+    color: #66518F;
 }
 
-.brand p{
+.brand p {
     font-size: smaller;
-    color: rgb(157, 151, 151);
+    color: #898494;
 }
 
 /* Progress Cards */
-#stats{
+
+#stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    border: 2px solid rgb(81, 0, 255);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-#total-card{
-    background-color: #24314d;
+.stat-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E9E3F5;
     border-radius: 12px;
-    padding: 10px;
-    border: 2px solid red;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(41, 37, 54, 0.04);
 }
 
-#completed-card{
-    background-color: #24314d;
+/* Input and Add Button */
+
+#input-add {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+#todo-input {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #292536;
+    padding: 15px;
     border-radius: 12px;
-    padding: 10px;
-    border: 2px solid red;
+    border: 1px solid #DDD6EA;
+    font-size: medium;
+    outline: none;
 }
 
-#remaining-card{
-     background-color: #24314d;
+#todo-input:focus {
+    border-color: #8B72C8;
+    box-shadow: 0 0 0 3px rgba(139, 114, 200, 0.12);
+}
+
+#todo-input::placeholder {
+    color: #A39EAD;
+    opacity: 1;
+}
+
+#add-btn {
+    background-color: #8B72C8;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+#add-btn:hover {
+    background-color: #765DB1;
+}
+
+#add-btn:active {
+    transform: scale(0.96);
+}
+
+/* Filter Buttons */
+
+#seg-btns {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    width: 100px;
+    background-color: #EEEAF5;
+    color: #66518F;
+    padding: 10px;
     border-radius: 8px;
-    padding: 10px;
-    border: 2px solid red;
+    border: 1px solid #E2DBEF;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
+#completed-btn{
+    width:fit-content;
+    padding: 5px;
+}
+.filter-btn:hover {
+    background-color: #DDD4EE;
+}
+
+/* Completed Todos */
 
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
 }
-
-#input-add{
-    display: grid;
-    grid-template-columns: 650px auto;
-    gap: 7px;
-    border: 2px solid red ;
-}
-
-
-#todo-input{
-    width: 100%;
-    background-color: #24314d;
-    color: #F9FAFB;
-    padding: 15px;
-    border-radius: 12px;
-    border:1px solid #303e5c;
-    font-size: medium;
-}
-
-#todo-input::placeholder {
-    color: #9CA3AF;
-    opacity: 1;
-}
-
-#add-btn{
-    background-color: #415d9b;
-    border-radius: 8px;
-    color: #F9FAFB;
-}
-
