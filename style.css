@@ -42,6 +42,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     border: 2px solid rgb(81, 0, 255);
+    margin-bottom: 10px;
 }
 
 #total-card{
@@ -60,7 +61,7 @@ body {
 
 #remaining-card{
      background-color: #24314d;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 10px;
     border: 2px solid red;
 }
@@ -69,5 +70,34 @@ body {
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+#input-add{
+    display: grid;
+    grid-template-columns: 650px auto;
+    gap: 7px;
+    border: 2px solid red ;
+}
+
+
+#todo-input{
+    width: 100%;
+    background-color: #24314d;
+    color: #F9FAFB;
+    padding: 15px;
+    border-radius: 12px;
+    border:1px solid #303e5c;
+    font-size: medium;
+}
+
+#todo-input::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+}
+
+#add-btn{
+    background-color: #415d9b;
+    border-radius: 8px;
+    color: #F9FAFB;
 }
 
