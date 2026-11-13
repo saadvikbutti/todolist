@@ -136,7 +136,7 @@ body {
 
 #completed-btn{
     width:fit-content;
-    padding: 5px;
+    padding: 10px;
 }
 .filter-btn:hover {
     background-color: #DDD4EE;
