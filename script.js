@@ -202,7 +202,14 @@ function ProgressCounters(){
 
 }
 
-// String Capitalization
+//Clear All Button
+const clearCompletedBtn = document.querySelector("#clear-completed");
+
+function clearCompletedTodos() {
+    todos = todos.filter(todo => !todo.completed);
+    saveTodos();
+    renderTodos();
+}
 
 
 // Event listeners
@@ -231,5 +238,6 @@ completed.addEventListener("click", function(){
     render();
 })
 
+clearCompletedBtn.addEventListener("click", clearCompletedTodos);
 // Initial render
 render();
