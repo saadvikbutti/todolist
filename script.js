@@ -208,7 +208,7 @@ const clearCompletedBtn = document.querySelector("#clear-completed");
 function clearCompletedTodos() {
     todos = todos.filter(todo => !todo.completed);
     saveTodos();
-    renderTodos();
+    render();
 }
 
 
