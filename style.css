@@ -129,6 +129,11 @@ body {
     transition: background-color 0.2s ease;
 }
 
+#clear-completed{
+    width: fit-content;
+    padding: 10px;
+}
+
 #completed-btn{
     width:fit-content;
     padding: 5px;
