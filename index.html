@@ -11,48 +11,52 @@
 </head>
 <body>
     <main id="dashboard">
-        <header class="brand">
-            <h1>Taskly</h1>
-            <p>A "simple" TODO list</p>
-        </header>
-    
-        <!-- Progress Counters -->
-        <section id="stats">
-            <div id="total-card" class="stat-card">
-                <h2 id="total-counters"></h2>
-                <h2 id="total-header">TOTAL</h2>
-            </div>
+      
+            <header class="brand">
+                <h1>Taskly</h1>
+                <p>A "simple" TODO list</p>
+            </header>
+        <section class="first">
+            <!-- Progress Counters -->
+            <section id="stats">
+                <div id="total-card" class="stat-card">
+                    <h2 id="total-counters"></h2>
+                    <h2 id="total-header">TOTAL</h2>
+                </div>
 
-            <div id="completed-card" class="stat-card">
-                <h2 id="completed-counters"></H2>
-                <h2 id="completed-header">COMPLETED</H2>
-            </div>    
+                <div id="completed-card" class="stat-card">
+                    <h2 id="completed-counters"></H2>
+                    <h2 id="completed-header">COMPLETED</H2>
+                </div>    
 
-            <div id="remaining-card" class="stat-card">
-                <h2 id="remaining-counters"></H2>
-                <h2 id="remaining-header">REMAINING</H2>
-            </div>
+                <div id="remaining-card" class="stat-card">
+                    <h2 id="remaining-counters"></H2>
+                    <h2 id="remaining-header">REMAINING</H2>
+                </div>
+            </section>
+
+            <section class="create-section">
+                <!-- input and btn to add new tools -->
+                <div id="input-add">
+                    <input type="text" id="todo-input" placeholder="Enter a task and press Add">
+
+                    <button id="add-btn">Add</button>
+                </div>
         </section>
 
-    <section class="create-section">
-        <!-- input and btn to add new tools -->
-        <div id="input-add">
-            <input type="text" id="todo-input" placeholder="Enter a task and press Add">
 
-            <button id="add-btn">Add</button>
-        </div>
+                <div id="seg-btns">
+                    <button id="clear-completed" class="filter-btn">Clear Completed</button>
+                    <button id="all-btn" class="filter-btn">All</button>
+                    <button id="active-btn" class="filter-btn">Active</button>
+                    <button id="completed-btn" class="filter-btn">Completed</button>
+                </div>
+            </section>    
 
-
-        <div id="seg-btns">
-            <button id="clear-completed" class="filter-btn">Clear Completed</button>
-            <button id="all-btn" class="filter-btn">All</button>
-            <button id="active-btn" class="filter-btn">Active</button>
-            <button id="completed-btn" class="filter-btn">Completed</button>
-        </div>
-    </section>    
-
-        <ul id="todo-list"></ul>
-    </main>    
+            <div class="second">
+                <ul id="todo-list"></ul>
+            </div>    
+        </main>    
     <script src="script.js"></script>
 </body>
 </html>

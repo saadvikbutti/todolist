@@ -29,7 +29,10 @@ body {
 /* Brand */
 
 .brand {
-    padding-bottom: 15px;
+    padding: 15px;
+    background-color: #F5F3EF;
+    margin-bottom: 10px;
+    border-radius: 12px;
 }
 
 .brand h1 {
@@ -157,7 +160,7 @@ body {
     gap: 10px;
     padding: 0;
     margin-top: 10px;
-    background-color: #ffe4fc;
+    background-color: #ccbdf1;
     padding: 30px;
     border-radius: 12px;
 }
@@ -224,5 +227,15 @@ body {
     border-radius: 12px;
 }
 
+.first{
+    background-color: #F5F3EF;
+    padding: 20px;
+    border-radius: 13px;
+    margin-bottom: 10px;
+}
 
-
+.second{
+    background-color: #F5F3EF;
+    padding: 20px;
+    border-radius: 13px;
+}
