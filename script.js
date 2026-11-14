@@ -138,6 +138,8 @@ function render() {
         list.appendChild(node);
     });
 
+    list.lastElementChild.scrollIntoView();
+
     ProgressCounters();
     
 }
